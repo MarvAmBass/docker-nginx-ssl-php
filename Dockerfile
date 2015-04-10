@@ -1,7 +1,7 @@
 FROM marvambass/nginx-ssl-secure
 MAINTAINER MarvAmBass
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update; apt-get install -y \
     php5-fpm
     
 # fix pathinfo see: (https://www.digitalocean.com/community/tutorials/how-to-install-linux-nginx-mysql-php-lemp-stack-on-ubuntu-14-04)
