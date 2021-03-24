@@ -5,7 +5,7 @@ _maintained by MarvAmBass_
 
 ## What is it
 
-This Dockerfile (available as ___marvambass/nginx-ssl-php___) gives you a completly secure running Nginx Container with php5-fpm.
+This Dockerfile (available as ___marvambass/nginx-ssl-php___) gives you a completly secure running Nginx Container with php7.3-fpm.
 
 It's based on the [marvambass/nginx-ssl-secure](https://registry.hub.docker.com/u/marvambass/nginx-ssl-secure/) Image
 
@@ -27,7 +27,7 @@ Add the following lines to your nginx server config:
     location ~ \.php$ {
       try_files $uri =404;
       fastcgi_split_path_info ^(.+\.php)(/.+)$;
-      fastcgi_pass unix:/var/run/php5-fpm.sock;
+      fastcgi_pass unix:/var/run/php7.3-fpm.sock;
       fastcgi_index index.php;
       fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
       include fastcgi_params;
